@@ -12,20 +12,21 @@
 //	}
 //	*dest = *src;//\0µÄ¿½±´
 
-void my_strcpy(char*dest, const char* src)//const·ÀÖ¹Ð´³É*src++ = *dest++
+char* my_strcpy(char*dest, const char* src)//const·ÀÖ¹Ð´³É*src++ = *dest++
 {
 	assert(src != NULL);//¶ÏÑÔ
+	char* r = dest;
 	while (*dest++ = *src++)
 	{
 		;//helloµÄ¿½±´
 	}
+	return r;
 }
 int main()
 {
 	char arr1[20] = "xxxxxxxxxxxx";
 	char arr2[] = "hello";
-	my_strcpy(arr1, arr2);
-	printf("%s\n", arr1);
+	printf("%s\n", my_strcpy(arr1, arr2));
 	return 0;
 }
 
