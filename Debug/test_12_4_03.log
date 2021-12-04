@@ -1,0 +1,3 @@
+﻿  test_12_4_03.c
+d:\练习.c\test_12_4_03\test_12_4_03\test_12_4_03.c(19): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+  test_12_4_03.vcxproj -> D:\练习.c\test_12_4_03\Debug\test_12_4_03.exe
