@@ -1,6 +1,8 @@
 //球球大作战
 
 #include <stdio.h>
+#include <windows.h>
+#include <dsound.h>
 #include <time.h>
 #include <math.h>
 #include <conio.h>
@@ -8,7 +10,7 @@
 #include <graphics.h>
 #include <mmsystem.h>
 #include <stdlib.h>
-#pragma comment(lib,"winmm.lib")
+#pragma comment(lib,"WINMM.LIB")
 #define WIDTH 1024
 #define HEIGHT 640
 #define MAP_WIDTH (WIDTH*3)
@@ -40,8 +42,9 @@ void creatFood(int i)
 }
 void gameInit()
 {
-	mciSendString(L"open BallBGM.mp3 alias BGM", NULL, NULL, NULL);
-	mciSendString(L"player BGM", NULL, NULL, NULL);
+
+	mciSendString(TEXT("open BallBGM.wma alias BGM"), NULL, NULL, NULL);
+	mciSendString(TEXT("play BGM repeat"), NULL, NULL, NULL);
 
 	//随机数种子
 	srand((unsigned)time(NULL));
